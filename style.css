@@ -1,0 +1,120 @@
+.header {
+    display: flex;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 19%, rgba(6,72,162,1) 44%, rgba(0,212,255,1) 100%);
+}
+
+.header .navbar {
+    /* background-color: rgb(33, 65, 84); */
+    background: linear-gradient(to bottom right, rgb(31, 115, 187), rgb(39, 71, 106));
+    display: flex;
+    justify-content: center;
+    width: 15vw;
+    height: 100vh;
+    transition: transform 200ms ease-in-out;
+}
+
+.navhide {
+    transform: translateX(-230px);
+}
+
+.header .navbar ul li {
+    margin: 8vh 0;
+    list-style: none;
+}
+
+.header .navbar ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+a {
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+}
+
+a::before,
+a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+}
+
+a::before {
+    background-color: #54b3d6;
+    height: 2px;
+    bottom: 0;
+    transform-origin: 100% 50%;
+    transform: scaleX(0);
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+a::after {
+    content: attr(data-replace);
+    height: 100%;
+    top: 0;
+    transform-origin: 100% 50%;
+    transform: translate3d(200%, 0, 0);
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+    color: #54b3d6;
+}
+
+a:hover::before {
+    transform-origin: 0% 50%;
+    transform: scaleX(1);
+}
+
+a:hover::after {
+    transform: translate3d(0, 0, 0);
+}
+
+.header .container {
+    display: flex;
+    width: 85vw;
+    color: white;
+}
+
+.container .icons {
+    margin: 15px;
+    font-size: 1.5rem;
+}
+
+.container .icons .hamb-icon {
+    margin: 15px -226px;
+}
+
+.container .icons .close-icon {
+    font-size: 1.8rem;
+    margin: 0px -55px;
+    color: white;
+}
+
+.hamb-icon:hover,
+.close-icon:hover {
+    border: 1px solid #000;
+}
+
+.header .container .fullinfo {
+    width: 70vw;
+    height: 60vh;
+    margin: 5vh auto;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.fullinfo .intro {
+    font-size: 1.5rem;
+}
+
+.fullinfo .name {
+    font-size: 2rem;
+    margin: 5px 0;
+}
+
+.fullinfo .about {
+    font-size: 1.2rem;
+    margin: 5px 0;
+}

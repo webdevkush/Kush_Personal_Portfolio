@@ -9,5 +9,7 @@ document.getElementById("cross").addEventListener("click", () => {
 document.getElementById("hamb").addEventListener("click", () => {
     document.querySelector(".navbar").classList.toggle("navhide");
     hamb.style.display = "none";
-    cross.style.display = "inline";
+    setTimeout(() => {
+        cross.style.display = "inline";
+    }, 300);
 });

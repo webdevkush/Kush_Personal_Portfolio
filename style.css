@@ -1,20 +1,19 @@
 .header {
     display: flex;
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 19%, rgba(6,72,162,1) 44%, rgba(0,212,255,1) 100%);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 19%, rgba(6, 72, 162, 1) 44%, rgba(0, 212, 255, 1) 100%);
 }
 
 .header .navbar {
-    /* background-color: rgb(33, 65, 84); */
     background: linear-gradient(to bottom right, rgb(31, 115, 187), rgb(39, 71, 106));
     display: flex;
     justify-content: center;
     width: 15vw;
     height: 100vh;
-    transition: transform 200ms ease-in-out;
+    transition: transform 300ms ease-in-out;
 }
 
 .navhide {
-    transform: translateX(-230px);
+    transform: translateX(-232px);
 }
 
 .header .navbar ul li {
@@ -90,9 +89,12 @@ a:hover::after {
     color: white;
 }
 
-.hamb-icon:hover,
 .close-icon:hover {
     border: 1px solid #000;
+}
+
+.hamb-icon:hover {
+    border: 1px solid #fff;
 }
 
 .header .container .fullinfo {
@@ -117,4 +119,15 @@ a:hover::after {
 .fullinfo .about {
     font-size: 1.2rem;
     margin: 5px 0;
+}
+
+.fullinfo .buttons{
+    margin-top: 3vh;
+}
+
+.fullinfo .buttons .btn {
+    padding: 8px;
+    color: rgb(2, 137, 255);
+    background-color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
